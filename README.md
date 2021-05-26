@@ -61,4 +61,4 @@ Entonces, lo que sucede es que el CLR coloca en una "caja" la variable miNumero 
 
 Entonces, como el CLR crea una "caja" en el _Heap_ que almacena el valor, el proceso como tal se conoce como _Boxing_.
 
-![Image](https://github.com/hevaldes/Boxing-UnBoxing/blob/main/assets/BoxUnbox_1.gif "SSH Key")
+![Image](https://github.com/hevaldes/Boxing-UnBoxing/blob/master/assets/BoxUnbox_1.gif "Boxing")
