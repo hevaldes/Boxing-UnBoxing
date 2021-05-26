@@ -87,24 +87,24 @@ En el siguiente fragmento de código se podrá obervar lo siguiente.
 2. Se declara una variable de tipo _object_ y se asigna la variable de tipo _int_. Esto provoca un _Boxing_.
 3. El compilador no puede sumar la variable de tipo int con la de tipo object aunque en la variable de tipo object contiene un número de tipo int. 
 
-![Image](https://github.com/hevaldes/Boxing-UnBoxing/blob/master/assets/Image1.png "Boxing and Unboxing")
+![Image](https://github.com/hevaldes/Boxing-UnBoxing/blob/master/assets/Image1.PNG "Boxing and Unboxing")
 
 ¿Cómo hacemos la corrección?
 
 1. Tenemos que hacer un _Unboxing_. Esto se realiza haciendo la conversión del tipo _object_ al tipo _int_.
 
-![Image](https://github.com/hevaldes/Boxing-UnBoxing/blob/master/assets/Image2.png "Boxing and Unboxing")
+![Image](https://github.com/hevaldes/Boxing-UnBoxing/blob/master/assets/Image2.PNG "Boxing and Unboxing")
 
 Veamos otro ejemplo de _Boxing_ y _Unboxing_. Ahora trataremos de imprimir el resultado. 
 
 1. Al usar el WriteLine, este método recibe una cadena y los argumentos en forma de objeto. En este caso, el compilador está haciendo el _Boxing_ de miNumero para convertirlo de _int_ a un _object_ y luego imprimirlo. 
 
-![Image](https://github.com/hevaldes/Boxing-UnBoxing/blob/master/assets/Image3.png "Boxing and Unboxing")
+![Image](https://github.com/hevaldes/Boxing-UnBoxing/blob/master/assets/Image3.PNG "Boxing and Unboxing")
 
 ¿Como evitamos el _Boxing_?
 
 1. Lo que hacemos es explícitamente hacer la conversión a un tipo _string_ que es un valor por referencia, en este método _WriteLine_ en particular lo que se pide es un _object_ que es un valor por referencia. De esta forma evitamos que el compilador haga el _Boxing_
 
-![Image](https://github.com/hevaldes/Boxing-UnBoxing/blob/master/assets/Image4.png "Boxing and Unboxing")
+![Image](https://github.com/hevaldes/Boxing-UnBoxing/blob/master/assets/Image4.PNG "Boxing and Unboxing")
 
 
