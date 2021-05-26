@@ -10,7 +10,7 @@ El lenguaje de programación C# tiene 2 tipos de dato:
 
 Los tipos por valor almacenan como tal solamente un valor, mientras que los tipos por referencia almacenan la dirección de memoria del valor que está almacenando. 
 
-[Referencia](https://docs.microsoft.com/en-us/dotnet/visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types "Value Types and Reference Types")
+[Value Types and Reference Types](https://docs.microsoft.com/en-us/dotnet/visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types "Value Types and Reference Types")
 
 Algunos ejemplos de tipos por valor: int, float, double, decimal, bool, char, etc
 Algunos ejemplos de tpos por referencia: object, string, array.
@@ -23,11 +23,11 @@ Este proceso u operaciones internas se conoce como **_Boxing and Unboxing_**
 
 ## ¿Qué es el _Boxing_?
 
-El _Boxing_ es el proceso de convertir un tipo de valor al tipo de objeto o cualquier tipo de interfaz implementado por este tipo de valor. El _Boxing_ es implícito.
+El _Boxing_ es el proceso de convertir un tipo de dato por valor a un tipo de dato por referencia. El _Boxing_ es implícito.
 
 ```
 int miMumero = 20; 
-object miObjeto =miNumero; // Aquí se realiza el _Boxing_
+object miObjeto = miNumero; // Aquí se realiza el _Boxing_
 ```
 
 Como se puede ver en el ejemplo anterior, la variable _miNumero_ es de tipo _int_ y es asignada a un tipo _object_ que es la variable _miObjeto_. 
@@ -62,3 +62,49 @@ Entonces, lo que sucede es que el CLR coloca en una "caja" la variable miNumero 
 Entonces, como el CLR crea una "caja" en el _Heap_ que almacena el valor, el proceso como tal se conoce como _Boxing_.
 
 ![Image](https://github.com/hevaldes/Boxing-UnBoxing/blob/master/assets/BoxUnbox_1.gif "Boxing")
+
+---
+
+## ¿Qué es el _Unboxing_?
+
+En pocas palabras, es lo inverso del _Boxing_. Es decir que es el proceso de convertir un dato que es por referencia a uno por valor. 
+
+_Unboxing_ significa extraer el valor del tipo por referencia y asignarlo a un tipo por valor. 
+
+El _Unboxing_ es explícito, es decir que tenemos que realizarlo explícitamente.
+
+```
+object miObjeto = 10; 
+int miMumero = (int)miObjeto; // Aqui hay _Unboxing_!!!
+```
+---
+
+## Veamos un ejemplo
+
+En el siguiente fragmento de código se podrá obervar lo siguiente. 
+
+1. Se declara una variable de tipo _int_.
+2. Se declara una variable de tipo _object_ y se asigna la variable de tipo _int_. Esto provoca un _Boxing_.
+3. El compilador no puede sumar la variable de tipo int con la de tipo object aunque en la variable de tipo object contiene un número de tipo int. 
+
+![Image](https://github.com/hevaldes/Boxing-UnBoxing/blob/master/assets/Image1.png "Boxing and Unboxing")
+
+¿Cómo hacemos la corrección?
+
+1. Tenemos que hacer un _Unboxing_. Esto se realiza haciendo la conversión del tipo _object_ al tipo _int_.
+
+![Image](https://github.com/hevaldes/Boxing-UnBoxing/blob/master/assets/Image2.png "Boxing and Unboxing")
+
+Veamos otro ejemplo de _Boxing_ y _Unboxing_. Ahora trataremos de imprimir el resultado. 
+
+1. Al usar el WriteLine, este método recibe una cadena y los argumentos en forma de objeto. En este caso, el compilador está haciendo el _Boxing_ de miNumero para convertirlo de _int_ a un _object_ y luego imprimirlo. 
+
+![Image](https://github.com/hevaldes/Boxing-UnBoxing/blob/master/assets/Image3.png "Boxing and Unboxing")
+
+¿Como evitamos el _Boxing_?
+
+1. Lo que hacemos es explícitamente hacer la conversión a un tipo _string_ que es un valor por referencia, en este método _WriteLine_ en particular lo que se pide es un _object_ que es un valor por referencia. De esta forma evitamos que el compilador haga el _Boxing_
+
+![Image](https://github.com/hevaldes/Boxing-UnBoxing/blob/master/assets/Image4.png "Boxing and Unboxing")
+
+
