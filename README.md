@@ -12,8 +12,8 @@ Los tipos por valor almacenan como tal solamente un valor, mientras que los tipo
 
 [Value Types and Reference Types](https://docs.microsoft.com/en-us/dotnet/visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types "Value Types and Reference Types")
 
-Algunos ejemplos de tipos por valor: int, float, double, decimal, bool, char, etc
-Algunos ejemplos de tpos por referencia: object, string, array.
+* Algunos ejemplos de tipos por valor: int, float, double, decimal, bool, char, etc
+* Algunos ejemplos de tpos por referencia: object, string, array.
 
 Normalmente, en el desarrollo tradicional se suele convertir de tipos por valor a tipos por referencia y viceversa. Este proceso tiene cierta característica dentro de .NET en relación al manejo de la memoria, lo que significa que .NET internamente hace ciertas operaciones para hacer estos cambios, los cuales son imperceptibles para los desarrolladores o clientes de las aplicaciones (hasta cierto punto).
 
